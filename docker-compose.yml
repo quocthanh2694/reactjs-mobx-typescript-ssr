@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    image: node:11
+    container_name: "loya_one_user_web"
+    volumes:
+      - .:/var/www/
+    working_dir: /var/www/
+    command: yarn restart:server
+    ports:
+      - 0.0.0.0:4089:3000
