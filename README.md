@@ -22,7 +22,7 @@ I hope, someday it will change.
 * [EditorConfig](https://editorconfig.org/) maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.
 
 ## Install dependencies
-To install dependencies simply run ``yarn install``.
+To install dependencies simply run ``sudo yarn install``.
 
 ## Developing client app
 When developing client app you can run ``yarn start:client`` and use the standard development server that CRA provides.

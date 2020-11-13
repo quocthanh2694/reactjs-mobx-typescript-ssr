@@ -32,3 +32,4 @@ declare module 'selection.json' {
     const value: object;
     export default value;
 }
+declare const $: any;
