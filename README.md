@@ -49,7 +49,8 @@ Run ``yarn start:docs`` to start a style documentation dev server.
 Run ``yarn build:docs`` to build a production HTML version.
 
 ## PS
-- If you're developing, you should only run on client side for hot reload instead of server side
+- Please use ```yarn``` for avoiding conflict version between library.
+- If you're developing, you should only run on client side for hot reload instead of server side.
 
 ## Contact
 - Thanh Tran: quocthanh2694@gmail.com
