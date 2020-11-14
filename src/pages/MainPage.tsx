@@ -17,14 +17,18 @@ interface MainPageProps extends RouteComponentProps {
 @inject((params: InjectParams) => ({ appStore: params.appStore }))
 class MainPage extends React.Component<MainPageProps> {
     componentDidMount() {
-        // setTimeout(() => {
-            
-            console.log('main page mounted')
-            $.get("demo_test.asp", function (data: any, status: any) {
-                console.log("Data: " + data + "\nStatus: " + status);
-            });
-        // }, 1000);
+        console.log('main page mounted')
+        $.get("demo_test.asp", function (data: any, status: any) {
+            console.log('demo test responsed');
+            console.log("Data: " + data + "\nStatus: " + status);
+        });
+
+        if (this.props.appStore) {
+            this.props.appStore.init();
+        }
+
     }
+
     render() {
         const appStore = this.props.appStore!;
         return (

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {action, computed, observable} from 'mobx';
-import {InitialState} from './meta';
+import { action, computed, observable } from 'mobx';
+import { InitialState } from './meta';
 
 const firstNames = ['Oliver', 'George', 'Harry', 'Jack', 'Jacob', 'Noah', 'Charlie', 'Muhammad', 'Thomas', 'Oscar'];
 const lastNames = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor'];
@@ -19,6 +19,10 @@ export default class AppStore {
         }
     }
 
+    init() {
+        console.log('inti appstore');
+    }
+
     @computed
     get fullName(): string {
         return `${this.firstName} ${this.lastName}`;
@@ -34,8 +38,12 @@ export default class AppStore {
         this.lastName = value;
     };
 
+    @action
     makeRandomFirstName = (e: React.MouseEvent<HTMLButtonElement>) => {
+        // this.firstName = firstNames[this.getRandomInt(0, firstNames.length - 1)]
+        // console.log("AppStore -> this.firstName", this.firstName)
         this.setFirstName(firstNames[this.getRandomInt(0, firstNames.length - 1)]);
+        console.log('new name', this.firstName);
     };
 
     makeRandomLastName = (e: React.MouseEvent<HTMLButtonElement>) => {

@@ -1,8 +1,12 @@
 import AppStore from './AppStore';
-import {RouterStore} from 'mobx-react-router';
+import { RouterStore } from 'mobx-react-router';
 import i18next from 'i18next';
 
-export type InjectParams = { appStore: AppStore, routerStore: RouterStore, i18n: i18next.i18n };
+export type InjectParams = {
+    appStore: AppStore,
+    routerStore: RouterStore,
+    i18n: i18next.i18n
+};
 
 export interface InitialState {
     firstName?: string;
@@ -12,6 +16,7 @@ export interface InitialState {
 export enum Routes {
     MAIN_PAGE = '/',
     OTHER_PAGE = '/other',
+    ABOUT = '/about',
 }
 
 declare global {
